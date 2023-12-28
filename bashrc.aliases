@@ -1,0 +1,121 @@
+#ANSI CODE##################################################################
+Black='\033[0;30m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+Blue='\033[0;34m'
+Purple='\033[0;35m'
+Cyan='\033[0;36m'
+Yellow='\033[1;33m'
+White='\033[1;37m'
+NC='\033[0m'
+############################################################################
+ddd=$(date +%j)
+PS1="                              "
+tput civis
+echo -e "\033[10;30H" "${Blue}      Welcome to the Linux Conandrum"
+echo -e "\033[11;30H" "${Green} +----------------------------------------+"
+echo -e "\033[12;30H"
+############################################################################
+alias c='clear'
+alias rca='source /home/batan/.bashrc.alieses'
+alias rrc='source ~/.bashrc'
+############################################################################
+alias ipc='sudo ipcrm -M 12345'
+alias search='sudo bash ser.sh'
+#modify existing files######################################################
+alias x='sudo chmod -x'
+alias nba='vim /home/batan/.bashrc.aliases'
+alias nbb='vim /home/batan/.config/nvim/init.vim'
+alias nbc=''
+alias nbcc=''
+alias nbd='vim /home/batan/LC/homepage/d.html'
+alias nbe='vim /home/batan/LC/homepage/bookmarks/bookmarks.html'
+#browser####################################################################
+alias un='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chromium --file-forwarding com.github.Eloston.UngoogledChromium @@u'
+alias fk='falkon'
+#tmux#######################################################################
+alias 1='tmux new-session \; split-window -h \; split-window -v -p 66 \; split-window -v\; attach\;'
+alias 2='tmux new-session \; split-window -v \; split-window -h -p 66 \; split-window -h\; selectp -t1\; attach\;'
+alias tk='tmux kill-session'
+alias wo='terminator --geometry="1200x800+0+0 -b -e "tmux new-session 'vim' -c ':VimwikiIndex' \; split-window -h 'nvim' -c ':Calendar-view=days' \; split-window -v -p 20 'bwm-ng' \; attach\;"'
+alias woo='tmux new-session 'vim' -c ':VimwikiIndex' \;split-window -v -p 30 'bpytop';\ split-window -h 'vit' \; split-window -v -p 20 'bwm-ng' \; attach\;'
+alias 122='tmux new-session \; split-window -v \; split-window -h -p 33 \; selectp -t1\; attach \;'
+alias tod='tmux new-session 'vim' -c ':Calendar=view-day' \; split-window -h 'nvim' -c ':TW' \; split-window -h -p 20 \; selectp -t 1\;'
+alias sound='tmux new-session 'castero' \; split-window -v 'cmus' \; split-window -h -p 30 \; selectp -t 1\; attach \;'
+#flatpaks###################################################################
+alias un="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chromium --file-forwarding com.github.Eloston.UngoogledChromium @@u"
+alias tutanota="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/chromium --file-forwarding com.github.Eloston.UngoogledChromium @@u"
+alias obsidian="md.obsidian.Obsidian"
+alias megasync="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=megasync nz.mega.MEGAsync"
+alias pick="org.kryogenix.Pick"
+alias you='falkon https://youtube.com'
+alias dia='dialog --inputbox "Penny for your thoughts..?" 10 40 2>>penny'
+alias cu='sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && youtube-dl --rm-cache-dir && sudo sweeper --automatic && sudo bleachbit --preset -c'
+alias cuu='sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo sweeper --automatic && yt-dlp --rm-cache-dir && sudo bleachbit --preset -c && sudo bash cache.sh'
+alias p='echo "Ba7an?12982"| xclip -selection clipboard'
+alias ipp='hostname -I && nmcli connection show && sudo ufw status'
+#mat2######################################################################
+alias mt='mat2 *.mp3 && mkdir 1 && mv *.cleaned.mp3 1 && cd 1 && qmv -f do -e vim *mp3 -c :%s!.cleaned.mp3!!'
+alias upd='sudo apt update'
+alias upg='sudo apt upgrade'
+alias xc='xclip -o|festival --tts'
+alias xd='xclip -selection c'
+#ddgr######################################################################
+alias dg='ddgr -w github.com -n 10'
+alias dy='ddgr -w youtube.com -n 10'
+alias dr='ddgr -w reddit.com -n10'
+alias ds='ddgr -w plato.stanford.edu'
+alias dp='ddgr -w pypi.org'
+#megatools#################################################################
+alias mg='megaget'
+alias mp='megaput'
+alias ml='megals'
+alias mr='megarm'
+alias mcc='megacopy'
+alias mmkd='megamkdir'
+#taskwarrior###############################################################
+alias ta='task add'
+alias tl='task list'
+alias td='task done'
+alias tb='task burndown'
+alias tdd='task delete'
+alias tbd='task burndown.daily'
+alias tll='task list project:'
+alias by='task add +buy proj:buy'
+alias taa='task add proj:$(date +%j)'
+#nodau#####################################################################
+alias nn='nodau new'
+alias nd='nodau del'
+alias nl='nodau list'
+#buku######################################################################
+alias ba='buku -a'
+alias bs='buku -s'
+alias bd='buku -d'
+alias bss='sudo -u batan bash /media/batan/work/NEW/scr/buku.sh'
+###########################################################################
+alias sbb='sudo -u batan bash'
+alias by='task add +buy proj:buy'
+alias mn='sudo -u batan bash /home/batan/LC/mn.sh'
+alias sb='sudo -u batan bash'
+alias cdd='cd /media/batan/work/NEW/'
+alias rf='rofi -show window'
+alias cou='sb count.sh'
+alias ee='exit'
+alias 10='cd /home/batan/10/ && ls -d */'
+alias 11='cd /home/batan/11/ && ls -d */'
+alias 12='cd /home/batan/12/ && ls -d */'
+alias 100='cd /media/100/ && clear && ls -d */'
+alias menu='cd /home/batan/10/menu/ && ls -d */'
+alias scripts='cd /home/batan/10/menu/scripts && ls -d */'
+alias alia='vim .bashrc.aliases2'
+alias vimr='vim .vimrc'
+alias scri='sudo -u batan bash /home/batan/10/menu/scripts/select.sh'
+alias update='sudo apt update && sudo apt upgrade -y'
+alias clean='sudo -u batan bash /home/batan/10/menu/scripts/clean.sh'
+alias dia='sudo bash /home/batan/10/postinstall/dia.sh'
+alias ssb='sudo bash'
+alias postinstall='cd /home/batan/10/postinstall/ && clear && ls -d */'
+alias pp='cd /home/batan/10/postinstall/ && clear && ls'
+alias x='xclip -selection clipboard'
+alias yd='yt-dlp -x --audio-format mp3'
+alias yds='clear && read abc && ddgr -n1 --np -x -w youtube.com $abc && echo $abc'
